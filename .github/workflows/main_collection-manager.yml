@@ -24,6 +24,7 @@ jobs:
       - name: npm install, build, and test
         run: |
           cd server && yarn 
+          cd ..
           cd client && yarn 
 
       - name: Upload artifact for deployment job
