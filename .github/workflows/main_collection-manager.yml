@@ -26,6 +26,7 @@ jobs:
           cd server && yarn 
           cd ..
           cd client && yarn 
+          cd ..
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -54,3 +55,7 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_353345A593C94F6DA3085D62AC78D942 }}
           package: .
+          
+      - name: 'Start the Node.js app'
+        run: |
+          node server/dist/server.js
