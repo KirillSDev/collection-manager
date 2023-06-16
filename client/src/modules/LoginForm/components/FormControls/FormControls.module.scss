@@ -1,0 +1,12 @@
+.container {
+    background-color: colors.$white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+.auth-header {
+    margin-bottom: 20px;
+    &__title {
+        color: colors.$primary;
+    }
+}
