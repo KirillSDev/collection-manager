@@ -1,0 +1,20 @@
+.container {
+    background-color: colors.$light;
+    border-bottom: 1px solid colors.$gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+.title {
+    cursor: pointer;
+    font-size: 1.3em;
+    font-weight: 300;
+    text-decoration: none;
+    color: colors.$primary;
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+}
