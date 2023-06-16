@@ -39,7 +39,17 @@ module.exports = {
             },
             {
                 test: /\.(c|sa|sc)ss$/i,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'postcss-loader',
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            additionalData: `@use "@scss/_colors.scss" as colors;`,
+                        },
+                    },
+                ],
             },
             {
                 test: /\.wooff2?$/i,
