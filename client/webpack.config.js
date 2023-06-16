@@ -23,6 +23,12 @@ module.exports = {
         }),
     ],
     resolve: {
+        alias: {
+            '@layout': path.resolve(__dirname, 'src/layout'),
+            '@scss': path.resolve(__dirname, 'src/assets/scss'),
+            '@interfaces': path.resolve(__dirname, 'src/interfaces'),
+            '@modules': path.resolve(__dirname, 'src/modules'),
+        },
         extensions: ['.tsx', '.ts', '.json', '.js'],
     },
     module: {
